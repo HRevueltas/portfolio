@@ -1,0 +1,76 @@
+/* Import only the scales you need */
+
+.navigationContainer {
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+
+    animation: fade-in 1s;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+.navigationMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    border: 1px solid #000;
+
+    width: 400px;
+}
+
+.navigationList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigationItem {
+    margin: 0 1rem;
+}
+
+.navigationLink {
+    text-decoration: none;
+    color:white;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s;
+    padding: 5px;
+}
+
+.navigationLink:hover {
+    color:var(--ruby-7);
+    background-color: var(--ruby-5);
+
+}
+
+.active {
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--ruby-7);
+    background: #1c2024;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
