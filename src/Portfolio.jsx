@@ -1,15 +1,18 @@
 // import { ContentGrid } from './components/ContentGrid'
 import { AppRouter } from './router/AppRouter'
+import ThemeProvider from './theme/ThemeProvider'
 export const Portfolio = () => {
   return (
 
     <>
-    {/* <AppTheme> */}
+      {/* <AppTheme> */}
+      <ThemeProvider>
 
-    <AppRouter/>
-    {/* </AppTheme> */}
-    
-    {/* <ContentGrid /> */}
+        <AppRouter />
+      </ThemeProvider>
+      {/* </AppTheme> */}
+
+      {/* <ContentGrid /> */}
     </>// 
 
   )

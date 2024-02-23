@@ -1,42 +1,73 @@
-import { useState } from 'react';
-import { Box, Code, Flex, IconButton, Link as LinkRadix } from '@radix-ui/themes'
-import styles from './navbar.module.css'
-import { GitHubLogoIcon, MoonIcon, SunIcon } from '@radix-ui/react-icons'
+import { useContext} from 'react';
+import { Box, Flex,  } from '@radix-ui/themes'
 import { Link, NavLink } from 'react-router-dom';
-import { ToggleTheme } from './ToggleTheme';
-
+import { ThemeContext } from '../../theme/ThemeContext';
+import { Toggle } from '../../theme/Toggle';
 export const NavBar = () => {
 
-
+    const { theme, setTheme } = useContext(ThemeContext);
+    const toggleTheme = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light');
+    };
     return (
-        <Flex className={`${styles.navigationContainer} `} as="div">
-            <Link href={'/'}> <GitHubLogoIcon /> </Link>
-            <Flex className={styles.navigationMenu} as='nav' >
-                <Flex className={styles.navigationList} as='ul' height={'9'} >
-                    <Flex className={styles.navigationItem} as='li' gap={'4'}>
-                        <NavLink
+        <Flex as="div"
+            position={'fixed'}
+            top={'0'}
+            left={'0'}
+            width={'100%'}
+            justify={'space-between'}
+            p={'3'}
+            z-index={'100'}
+            className='fade-in'
+m
+        >
 
-                            className={({ isActive }) => `${styles.navigationLink}  ${isActive ? styles.active : ''}`}
+            <Box as='div' display={'block'} ></Box>
+
+            <Flex as='nav'
+                align={'center'}
+                justify={'center'}
+                width={'max-content'}
+                style={{ borderRadius: '10px', backgroundColor: 'var(--backgroundSecondary)', padding: '5px', boxShadow: 'var(--shadows-medium)' }}
+
+            >
+
+                <Flex as='ul'
+                    align={'center'}
+                    justify={'center'}
+                >
+                    <Flex as='li'
+                        ml={'4'}
+                        mr={'4'}
+                        gap={'4'}>
+
+                        <NavLink
+                            className={({ isActive }) => ` link ${isActive ? 'active' : 'hovered'} `}
+                            style={{ textDecoration: 'none', fontSize: 'var(--fontSizes-14)', padding: '2px 4px', textAlign: 'center', fontWeight: 'var(--fontWeights-400)' }}
                             to={'/home'} >
                             Home
                         </NavLink>
                         <NavLink
-                            className={({ isActive }) => `${styles.navigationLink}  ${isActive ? styles.active : ''}`}
+                            className={({ isActive }) => `link ${isActive ? 'active' : ''} hovered`}
+                            style={{ textDecoration: 'none', fontSize: 'var(--fontSizes-14)', padding: '2px 4px', textAlign: 'center', fontWeight: 'var(--fontWeights-400)' }}
                             to={'/projects'}> Projects
                         </NavLink>
                         <NavLink
-                            className={({ isActive }) => `${styles.navigationLink}  ${isActive ? styles.active : ''}`}
+                            className={({ isActive }) => ` link ${isActive ? 'active' : ''} hovered`}
+                            style={{ textDecoration: 'none', fontSize: 'var(--fontSizes-14)', padding: '2px 4px', textAlign: 'center', fontWeight: 'var(--fontWeights-400)' }}
                             to={'/craft'} > Craft
                         </NavLink>
                         <NavLink
-                            className={({ isActive }) => `${styles.navigationLink}  ${isActive ? styles.active : ''}`}
+                            className={({ isActive }) => ` link ${isActive ? 'active' : ''} hovered`}
+                            style={{ textDecoration: 'none', fontSize: 'var(--fontSizes-14)', padding: '2px 4px', textAlign: 'center', fontWeight: 'var(--fontWeights-400)' }}
                             to={'/about'} > About
                         </NavLink>
                     </Flex>
                 </Flex>
             </Flex>
 
-            <ToggleTheme />
+            <Toggle theme={theme} onToggle={toggleTheme} />
+
         </Flex>
     )
 }
