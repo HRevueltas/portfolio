@@ -6,13 +6,13 @@ import '@radix-ui/themes/styles.css';
 import { Portfolio } from './Portfolio.jsx'
 
 import { BrowserRouter } from 'react-router-dom';
-import { Theme, ThemePanel } from '@radix-ui/themes';
+import { Theme } from '@radix-ui/themes';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Theme appearance="inherit"  accentColor="ruby" grayColor='olive'   >
+      <Theme appearance="inherit"  accentColor="ruby" grayColor='olive' >
         <Portfolio />
         {/* <ThemePanel/> */}
 
