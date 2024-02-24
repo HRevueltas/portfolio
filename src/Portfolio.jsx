@@ -7,7 +7,6 @@ export const Portfolio = () => {
     <>
       {/* <AppTheme> */}
       <ThemeProvider>
-
         <AppRouter />
       </ThemeProvider>
       {/* </AppTheme> */}

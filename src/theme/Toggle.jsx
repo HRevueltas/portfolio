@@ -8,7 +8,7 @@ export const Toggle = ({ theme, onToggle }) => {
 
     return (
         
-            <IconButton  className={`toggle ${tema}`} aria-label='toggle theme'  variant='soft' radius='small' onClick={onToggle} as='div'  title="Change theme" > 
+            <IconButton  className={`toggle ${tema}`} aria-label='toggle theme'  variant='soft' radius='full' onClick={onToggle} as='div'  title="Change theme" > 
                 {tema === 'light' ? <MoonIcon cursor={'pointer'} /> : <SunIcon cursor={'pointer'}  />}
             </IconButton>
         

@@ -1,47 +1,58 @@
-import React, { useState, useEffect, useRef } from 'react';
+// import React, { useRef, useEffect } from 'react';
 
-export const MagicText = ({ text, animationType, colorStart, colorEnd, ...props }) => {
-  const [isAnimating, setIsAnimating] = useState(false);
-  const textRef = useRef(null);
+// export const MagicText = ({ colorStart, colorEnd, children, animation }) => {
+//   const textRef = useRef(null);
+//   const animationRef = useRef(null);
 
+//   useEffect(() => {
+//     if (textRef.current && !animationRef.current) {
+//       if (animation === 'gradient') {
+//         textRef.current.style.background = `linear-gradient(25deg, ${colorStart}, ${colorEnd} 50%, ${colorStart} 50%)`;
+//         textRef.current.style.backgroundClip = 'text';
+//         textRef.current.style.color = 'transparent';
+//         textRef.current.style.backgroundSize = '100%';
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsAnimating(true);
-    }, 1000);
+//         animationRef.current = new Animation(
+//           new KeyframeEffect(
+//             textRef.current,
+//             [
+//               { backgroundPosition: '0' },
+//               { backgroundPosition: '150px' }
+//             ],
+//             {
+//               duration: 6000,
+//               iterations: Infinity
+//             }
+//           ),
+//           document.timeline
+//         );
 
-    return () => clearTimeout(timeout);
-  }, []);
+//         animationRef.current.play();
 
-  useEffect(() => {
-    if (textRef.current) {
-      // Dentro del componente MagicText:
-      // textRef.current.style.background = `linear-gradient(45deg, ${colorStart}, ${colorEnd} 10% 20%, ${colorStart} 30% 40%, ${colorEnd} 50% 60%, ${colorStart} 70% 80%, ${colorEnd} 90% 100%, ${colorStart} 110% 120%, ${colorEnd} 130% 140%`;
-      textRef.current.style.background = `linear-gradient(80deg , ${colorStart} , ${colorEnd}, 20%, ${colorStart} 40%, ${colorEnd} 60%, ${colorStart} 80%, ${colorEnd} 100%)`;
-      textRef.current.style.backgroundClip = 'text';
-      textRef.current.style.color = 'transparent';
-      textRef.current.style.backgroundSize = '100%';
+//       } else if (animation === 'blink') {
+//         animationRef.current = new Animation(
+//           new KeyframeEffect(
+//             textRef.current,
+//             [
+//               { opacity: '0', color: colorStart },
+//               { opacity: '1', color: colorEnd }
+//             ],
+//             {
+//               duration: 1000,
+//               iterations: Infinity
+//             }
+//           ),
+//           document.timeline
+//         );
 
+//         animationRef.current.play();
+//       }
+//     }
+//   }, [colorStart, colorEnd, children, animation]);
 
-      // Anima el background-position
-      textRef.current.animate([
-        {
-          backgroundPosition: '0px',
-
-        },
-        {
-          backgroundPosition: '1500px ',
-        }
-      ], {
-        duration: 100000,
-        iterations: Infinity,
-      });
-    }
-  }, [text, colorStart, colorEnd]);
-
-  return (
-    <span className='fade-in-1000' ref={textRef} style={{ ...props }}>
-      {text}
-    </span>
-  );
-};
+//   return (
+//     <p className="fade-in-1000" ref={textRef}>
+//       {children}
+//     </p>
+//   );
+// };
