@@ -5,14 +5,8 @@ import { ThemeContext } from '../../theme/ThemeContext';
 import { Toggle } from '../../theme/Toggle';
 
 export const NavBar = () => {
-
-
-    const { theme, setTheme } = useContext(ThemeContext);
+    const { theme, toggleTheme } = useContext(ThemeContext);
     const navRef = useRef(null);
-
-    const toggleTheme = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light');
-    };
 
     useEffect(() => {
         let prevScrollpos = window.pageYOffset;
@@ -36,7 +30,6 @@ export const NavBar = () => {
         };
     }, []);
 
-
     return (
         <Heading
             ref={navRef}
@@ -59,11 +52,6 @@ export const NavBar = () => {
         >
             <Box display={'block'} />
 
-
-
-       
-
-
             <Flex
                 align={'center'}
                 justify={'center'}
@@ -73,7 +61,7 @@ export const NavBar = () => {
                 <Flex align={'center'} justify={'center'}>
                     <Flex ml={'4'} mr={'4'} gap={'4'}>
                         <NavLink
-                            className={({ isActive }) => ` link ${isActive ? 'active' : ''} `}
+                            className={({ isActive }) => ` link ${isActive ? 'active' : ''} hovered `}
                             style={{ textDecoration: 'none', fontSize: 'var(--fontSizes-14)', padding: '2px 4px', textAlign: 'center', fontWeight: 'var(--fontWeights-400)' }}
                             to={'/home'}
                         >
@@ -103,28 +91,6 @@ export const NavBar = () => {
                     </Flex>
                 </Flex>
             </Flex>
-
-{/* 
-            <select id="navigation"
-                style={{
-                    color: 'var(--ruby-10)',
-                    borderRadius: 'var(--radii-2)',
-                    backgroundColor: 'var(--backgroundSecondary)',
-                    padding: '5px',
-                    boxShadow: 'var(--shadows-medium)'
-
-                }}
-
-            >
-                <option value="home">Home</option>
-                <option value="projects">Projects</option>
-                <option value="craft">Craft</option>
-                <option value="about">About</option>
-            </select> */}
-
-
-
-
 
             <Toggle theme={theme} onToggle={toggleTheme} />
         </Heading>

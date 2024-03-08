@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-import { HomePage } from "../portfolio/pages/HomePage"
 import { AboutPage } from "../portfolio/pages/AboutPage"
 import { ProjectsPage } from "../portfolio/pages/ProjectsPage"
 import { NotFoundPage } from "../portfolio/pages/NotFoundPage"
 import { NavBar } from "../ui"
 import { Craft } from "../portfolio/pages/Craft"
+import { HomePage } from "../portfolio/pages/homePage/HomePage"
 
 export const AppRouter = () => {
     return (

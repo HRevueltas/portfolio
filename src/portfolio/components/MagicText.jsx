@@ -7,7 +7,7 @@
 //   useEffect(() => {
 //     if (textRef.current && !animationRef.current) {
 //       if (animation === 'gradient') {
-//         textRef.current.style.background = `linear-gradient(25deg, ${colorStart}, ${colorEnd} 50%, ${colorStart} 50%)`;
+//         textRef.current.style.background = `linear-gradient(25deg, ${colorStart}, ${colorEnd} 50%, ${colorStart} 50%)  0 0 / 500px 500px repeat-x`;
 //         textRef.current.style.backgroundClip = 'text';
 //         textRef.current.style.color = 'transparent';
 //         textRef.current.style.backgroundSize = '100%';
@@ -17,7 +17,7 @@
 //             textRef.current,
 //             [
 //               { backgroundPosition: '0' },
-//               { backgroundPosition: '150px' }
+//               { backgroundPosition: '500px' }
 //             ],
 //             {
 //               duration: 6000,

@@ -63,21 +63,24 @@
   --shadows-large: 0 30px 60px rgba(0, 0, 0, 0.12);
   --shadows-tooltip: 0px 4px 8px 0px rgba(0, 0, 0, 0.04), 0px 1px 1px 0px rgba(0, 0, 0, 0.02);
   --transitions-snappy: cubic-bezier(.2, .8, .2, 1);
+  --purple: rgb(123, 31, 162);
+  --violet: rgb(103, 58, 183);
+  --pink: rgb(244, 143, 177);
 }
-
+/* 
 .light {
-  --background: #FCFCFC;
-  --backgroundSecondary: #FFFCFD;
-  --text: #202020;
-  --textSecondary: #CA244D;
-  --borderColor-1: #F8BFC8;
-  --borderColor-2: #EFACB8;
-  --focus: #E592A3;
-  --active-1: #FEEAED;
-  --active-2: #FFDCE1;
-  --active-3: #FFCED6;
-  --solid-1: #E54666;
-  --solid-2: #DC3B5D;
+  --background: var(--gray-1);
+  --backgroundSecondary: var(--gray-2);
+  --text: var(--gray-12);
+  --textSecondary: var(--ruby-11);
+  --borderColor-1: #var(--ruby-6);
+  --borderColor-2: var(--ruby-7);
+  --focus: var(--ruby-8);
+  --active-1: var(--ruby-3);
+  --active-2: var(--ruby-4);
+  --active-3: var(--ruby-5);
+  --solid-1: var(--ruby-9);
+  --solid-2: var(--ruby-10);
   --ruby-1: #fffcfd;
   --ruby-2: #fff7f8;
   --ruby-3: #feeaed;
@@ -105,18 +108,18 @@
 }
 
 .dark {
-  --background: #111111;
-  --backgroundSecondary: #191919;
-  --text: #EEEEEE;
-  --textSecondary: #FF949D;
-  --borderColor-1: #6F2539;
-  --borderColor-2: #883447;
-  --focus: #B3445A;
-  --active-1: #3A141E;
-  --active-2: #4E1325;
-  --active-3: #5E1A2E;
-  --solid-1: #E54666;
-  --solid-2: #EC5A72;
+  --background: var(--gray-1);
+  --backgroundSecondary: var(--gray-2);
+  --text: var(--gray-12);
+  --textSecondary: var(--ruby-11);
+  --borderColor-1: #var(--ruby-6);
+  --borderColor-2: var(--ruby-7);
+  --focus: var(--ruby-8);
+  --active-1: var(--ruby-3);
+  --active-2: var(--ruby-4);
+  --active-3: var(--ruby-5);
+  --solid-1: var(--ruby-9);
+  --solid-2: var(--ruby-10);
   --ruby-1: #191113;
   --ruby-2: #1e1517;
   --ruby-3: #3a141e;
@@ -142,6 +145,65 @@
   --ruby-a11: #ff949d;
   --ruby-a12: #ffd3e2fe;
 
+} */
+
+
+.light {
+  --background: var(--gray-1);
+  --backgroundSecondary: var(--violet-2);
+  --text: var(--gray-12);
+  --textSecondary: var(--violet-11);  /* replaced ruby-11 with violet-11 */
+  --borderColor-1: var(--violet-6);  /* replaced ruby-6 with violet-6 */
+  --borderColor-2: var(--violet-7);  /* replaced ruby-7 with violet-7 */
+  --focus: var(--violet-8);           /* replaced ruby-8 with violet-8 */
+  --active-1: var(--violet-3);        /* replaced ruby-3 with violet-3 */
+  --active-2: var(--violet-4);        /* replaced ruby-4 with violet-4 */
+  --active-3: var(--violet-5);        /* replaced ruby-5 with violet-5 */
+  --solid-1: var(--violet-9);         /* replaced ruby-9 with violet-9 */
+  --solid-2: var(--violet-10);        /* replaced ruby-10 with violet-10 */
+  --ruby-1: #fffcfd;
+  --ruby-2: #fff7f8;
+  --ruby-3: #feeaed;
+  --ruby-4: #ffdce1;
+  --ruby-5: #ffced6;
+  --ruby-6: #f8bfc8;  /* redundant, can be removed */
+  --ruby-7: #efacb8;  /* redundant, can be removed */
+  --ruby-8: #e592a3;  /* redundant, can be removed */
+  --ruby-9: #e54666;  /* redundant, can be removed */
+  --ruby-10: #dc3b5d;  /* redundant, can be removed */
+  --ruby-11: #ca244d;  /* redundant, can be removed */
+  --ruby-12: #64172b;  /* redundant, can be removed */
+  --ruby-a1: #ff005503;
+  --ruby-a2: #ff002008;
+  --ruby-a3: #f3002515;
+  --ruby-a4: #ff002523;
+  --ruby-a5: #ff002a31;
+  --ruby-a6: #e4002440;
+  --ruby-a7: #ce002553;
+  --ruby-a8: #c300286d;
+  --ruby-a9: #db002cb9;
+  --ruby-a10: #d2002cc4;
+  --ruby-a11: #c10030db;
+  --ruby-a12: #550016e8;
+}
+
+.dark {
+  --background: var(--gray-1);
+  --backgroundSecondary: var(--violet-2);
+  --text: var(--gray-12);
+  --textSecondary: var(--violet-11);  /* replaced ruby-11 with violet-11 */
+  --borderColor-1: var(--violet-6);  /* replaced ruby-6 with violet-6 */
+  --borderColor-2: var(--violet-7);  /* replaced ruby-7 with violet-7 */
+  --focus: var(--violet-8);           /* replaced ruby-8 with violet-8 */
+  --active-1: var(--violet-3);        /* replaced ruby-3 with violet-3 */
+  --active-2: var(--violet-4);        /* replaced ruby-4 with violet-4 */
+  --active-3: var(--violet-5);        /* replaced ruby-5 with violet-5 */
+  --solid-1: var(--violet-9);         /* replaced ruby-9 with violet-9 */
+  --solid-2: var(--violet-10);        /* replaced ruby-10 with violet-10 */
+  --ruby-1: #191113;
+  --ruby-2: #1e1517;
+  --ruby-3: #3a141e;
+  /* --ruby-4: #4 */
 }
 
 .link {
@@ -149,8 +211,8 @@
 }
 
 .active {
-  color: var(--active-1);
-  background: var(--ruby-11);
+  color: var(--textSecondary);
+  background: var(--active-3);
   border-radius: var(--radii-1);
 }
 
@@ -163,7 +225,7 @@
 
 .hovered:hover {
   color: var(--textSecondary);
-  background: var(--active-2);
+  background: var(--active-1);
   border-radius: var(--radii-1);
 }
 
@@ -256,33 +318,47 @@
 }
 
 .magic-span {
-  --a: rgb(219, 145, 203);
-  --b: rgb(103, 63, 215);
-  cursor: default;
-  position: relative;
-  font-weight: 500;
-
   background-size: 200%;
   -webkit-box-decoration-break: clone;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: unset;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  overflow: visible;
-  animation: 3s linear 0s infinite normal forwards running magic-span;
-  background-image: linear-gradient(120deg, var(--a)0%, var(--b)50%, var(--a)100%);
-
+  animation: magic-span 3s linear infinite;
+  background-image: linear-gradient(to right, var(--purple), var(--violet), var(--pink), var(--purple));
 
 }
 
+.span-child.animate {
+  animation: scale 700ms ease 0s 1 normal forwards running;
+}
+
+.span-child:hover.animate {
+  animation-play-state: running;
+}
+
+.svg.rotate-animation {
+  animation: rotating 1000ms linear 0s 1 normal none running;
+}
+
+.svg:hover.rotate-animation {
+  animation-play-state: running;
+}
 
 @keyframes magic-span {
+  0% {
+    background-position: 0% center;
+  }
+
   100% {
     background-position: -200% center;
   }
 }
+
+.rotate-animation {
+  animation: rotating 300ms linear 0s 1 normal none running;
+
+}
+
+
 
 @keyframes rotating {
   0% {
@@ -295,6 +371,9 @@
   }
 }
 
+.scale-animation {
+  animation: scale 700ms ease 0s 1 normal forwards running;
+}
 
 @keyframes scale {
   0% {
