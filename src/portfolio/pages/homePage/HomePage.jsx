@@ -8,15 +8,6 @@ import { cardInfo } from '../../helpers/cardinfo';
 
 export const HomePage = () => {
 
-
-  const {
-    id,
-    date,
-    title,
-    description,
-    url
-  } = cardInfo;
-
   let timeouts = [], intervals = [];
   const rand = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -110,21 +101,21 @@ export const HomePage = () => {
         </div>
       </Flex>
 
-      <section className={styles.projects}>
+      <Flex direction="column" justify="center" p={'4'}  className={styles.projects}>
         <Link to={'/projects'} >
-          <div className={styles.sectionTitle}><h2>Projects</h2>
+          <h2 className={styles.sectionTitle}>Projects
+            <span>
             <Link2Icon />
-          </div>
-
+              </span>
+          </h2>
         </Link>
-        {/* <ProjectCard  url={'https://cdn.rauno.me/mercury.mp4'} title={'Journal'} description={'this is a short description'} date={'2023'} /> */}
-        {/* <ProjectCard  /> */}
         <div className={styles.projectCardContainer}>
 
           {cardInfo.map((card, index) => (
             <ProjectCard key={index} {...card} />
           ))
           }
+          
         </div>
         <div className="project">
           <h3>Project 1</h3>
@@ -155,7 +146,7 @@ export const HomePage = () => {
         </div>
 
 
-      </section>
+      </Flex>
 
       <section className="technolgies">
         <h2 className={styles.sectionTitle}>Technologies</h2>
