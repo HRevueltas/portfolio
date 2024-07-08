@@ -1,0 +1,80 @@
+.cardContainer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    border: 1px solid var(--gray-a6);
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--background);
+    transition: all ease-in-out 0.2s;
+    overflow: hidden;
+}
+
+.cardContainer::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    transform: translate(-50%, 10%) rotate(125deg);
+    background-color: var(--gray-a6);
+    border-radius: 1rem;
+    z-index: 10;
+}
+
+.cardContainer:hover::after {
+    animation: reluciente 3s ease ;
+}
+
+.cardContainer:hover {
+}
+
+
+
+@keyframes pulse {
+    0% {
+        background-color: var(--gray-a8);
+        opacity: 1;
+    }
+    50% {
+        background-color: var(--gray-a1);
+        opacity: .6;
+    }
+
+    100% {
+        background-color: var(--gray-a8);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes reluciente {
+    0% {
+        transform: translate(-50%, 10%) rotate(125deg);
+        background-color: var(--gray-a8);
+        opacity: 1;
+
+    }
+    25% {
+        transform: translate(100%, 10%) rotate(125deg);
+        opacity: 0.3;
+        background-color: var(--gray-a1);
+    }
+    50% {
+        transform: translate(100%, 10%) rotate(125deg);
+        opacity: 0.5;
+        background-color: var(--gray-a2);
+    }
+    75% {
+        transform: translate(100%, 10%) rotate(125deg);
+        opacity: 0.5;
+        background-color: var(--gray-a2);
+    }
+    100% {
+        transform: translate(100%, 10%) rotate(125deg);
+        opacity: 0.5;
+        background-color: var(--gray-a2);
+    }
+}

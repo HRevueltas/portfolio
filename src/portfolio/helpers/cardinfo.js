@@ -6,7 +6,7 @@ export const cardInfo = [
 
         id: 1,
         date: '2024',
-        title: 'Portfolio',
+        title: 'Gestión bibliotecaria',
         description: 'This is my portfolio website. It is built with React and Next.js. It is a responsive website that showcases my projects and skills.',
         url: '/image.png',
         isActive: true,

@@ -10,6 +10,7 @@ export const PortfolioLayout = ({ children }) => {
                 top: '100px',
                 position: 'relative', top: '100px'
             }}
+
             // style={{
             //     position: 'relative',
             //     top: '100px',
@@ -24,7 +25,7 @@ export const PortfolioLayout = ({ children }) => {
             //     boxShadow: 'var(--shadow-4)',
             // }}
 
-            as="main"   >
+            >
 
 
 

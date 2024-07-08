@@ -211,8 +211,8 @@
 }
 
 .active {
-  color: var(--textSecondary);
-  background: var(--active-3);
+  color: var(--solid-1);
+  /* background: var(--active-3); */
   border-radius: var(--radii-1);
 }
 
@@ -402,7 +402,6 @@
 .magic-text {
 
   animation: background-text-animation 1s infinite;
-
   /* animation: magic-text 1s infinite; */
 }
 
