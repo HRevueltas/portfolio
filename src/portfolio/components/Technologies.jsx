@@ -8,7 +8,9 @@ export const Technologies = () => {
 
     return (
 
-        <Flex direction={'row'} wrap={'wrap'} gap={'3'} >
+        <Flex direction={'row'} wrap={'wrap'} gap={'3'} align={'center'} justify={'center'}  >
+
+
 
             {/* <SkillCard
                 icon={'./icons/javascript.svg'}
@@ -32,6 +34,8 @@ export const Technologies = () => {
                 </Box>
 
             </Box> */}
+
+
         </Flex>
 
         // <div>Technologies</div>

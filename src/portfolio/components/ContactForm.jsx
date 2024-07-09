@@ -5,8 +5,9 @@ export const ContactForm = () => {
     return (
         <Flex direction={{ initial: 'column', lg: 'row' }} align="center" justify={{ initial: 'center', lg: 'between' }} p="4">
 
-            <Box style={{ width: '200px', height: '200px', backgroundColor: 'blue'  }} mb={'-8'} />
-            <Box style={{ width: '200px', height: '200px', backgroundColor: 'green' }} mb={'-8'} />
+            <Box  style={{ width: '100%', height: '200px', backgroundColor: 'blue'  }} mb={'-8'}>
+
+            </Box>
 
             <Box as="form" width={{ initial: '100%', lg: '50%' }} p="4" backgroundColor="lightgray" borderRadius="8px">
                 <Box mb="3">

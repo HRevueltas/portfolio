@@ -59,7 +59,7 @@ export const cardInfo = [
     },
     {
         name: 'NextJS',
-        icon: 'devicon-nextjs-original-wordmark colored',
+        icon: 'devicon-nextjs-original-wordmark',
     },
     
     {
