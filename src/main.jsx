@@ -12,7 +12,7 @@ import { Theme } from '@radix-ui/themes';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Theme appearance="inherit"  accentColor="violet" grayColor='olive'  >
+      <Theme appearance="inherit"  accentColor="violet" grayColor='olive'   >
         <Portfolio />
         {/* <ThemePanel/> */}
 

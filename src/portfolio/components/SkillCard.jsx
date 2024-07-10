@@ -7,7 +7,7 @@ import { useRef } from 'react';
 export const SkillCard = ({
     name,
     icon,
- 
+
 }) => {
 
 
@@ -36,13 +36,13 @@ export const SkillCard = ({
         <Flex ref={cardRef} onMouseMove={handleMouseEnter} onMouseLeave={handleMouseLeave} className={styles.cardContainer}>
 
 
-            <Flex align={'center'} direction={'column'} gap={'4'} >
+            <Flex align={'center'} direction={'column'} gap={'3'} >
 
 
                 <i style={{ fontSize: "2rem" }} className={icon}> </i>
 
-                <Text size={'3'} weight={'medium'} style={{ color: "var(--text)" }} >{name}</Text>
-{/* 
+                <Text size={'2'} weight={'medium'} style={{ color: "var(--text)" }} >{name}</Text>
+                {/* 
                 <div>
 
                <Box className={styles.line} ></Box>
