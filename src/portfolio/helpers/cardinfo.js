@@ -10,6 +10,7 @@ export const cardInfo = [
         description: 'This is my portfolio website. It is built with React and Next.js. It is a responsive website that showcases my projects and skills.',
         url: '/image.png',
         isActive: true,
+        preview: true,
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ export const cardInfo = [
         description: 'This is my portfolio website. It is built with React and Next.js. It is a responsive website that showcases my projects and skills.',
         url: '/seek.mp4',   
         isActive: true,
+        preview: true,
 
     },
     {
@@ -27,6 +29,7 @@ export const cardInfo = [
         description: 'This is my portfolio website. It is built with React and Next.js. It is a responsive website that showcases my projects and skills.',
         url: '/futuristic.png',
         isActive: true,
+        preview: false,
     },
     {
         id: 4,
@@ -35,6 +38,7 @@ export const cardInfo = [
         description: 'This is my portfolio website. It is built with React and Next.js. It is a responsive website that showcases my projects and skills.',
         url: '/futuristic.png',
         isActive: true,
+        preview: false,
     },
     {
         id: 5,
@@ -43,6 +47,7 @@ export const cardInfo = [
         description: 'This is my portfolio website. It is built with React and Next.js. It is a responsive website that showcases my projects and skills.',
         url: '/animated-typing.mp4',
         isActive: false,
+        preview: false,
     },
     
     {

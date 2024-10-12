@@ -8,7 +8,7 @@ export const PortfolioLayout = ({ children }) => {
         <Container
             style={{
                 top: '100px',
-                position: 'relative', top: '100px'
+                position: 'relative', top: '100px',
             }}
 
             // style={{

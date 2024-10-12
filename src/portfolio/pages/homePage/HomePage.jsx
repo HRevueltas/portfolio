@@ -1,5 +1,5 @@
 import { Box, Flex, Text, Heading } from '@radix-ui/themes';
-import { GitHubLogoIcon, Link1Icon, Link2Icon, LinkedInLogoIcon } from '@radix-ui/react-icons';
+import { CodeIcon, GitHubLogoIcon, Link1Icon, Link2Icon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import { Avatar } from '@radix-ui/themes';
 import { PortfolioLayout } from '../../layout/PortfolioLayout';
 import styles from './homePage.module.css';
@@ -53,7 +53,7 @@ export const HomePage = () => {
         <PortfolioLayout>
             <Flex direction="column" justify="center" p={'4'}>
                 <Box>
-                    <Avatar src={'./public/largeBust.png'} alt={'avatar'} size={{ initial: '9', lg: '9', md: '6' }} mb={'4'} />
+                    <Avatar src={'./public/largeBust.png'} alt={'avatar'} size={{ initial: "50%", md: "9", sm: "9", lg: '9', }} mb={'4'} />
                     <h1
                         className={styles.nameTitle}>Harold Revueltas</h1>
                     <p data-name='magic' className={styles.description}>
@@ -139,18 +139,15 @@ export const HomePage = () => {
             </Flex>
 
             <Flex direction="column" justify="center" p={'4'} className={styles.projects}>
-                {/* <Link to={'/projects'}>
-                    <h2 className={styles.sectionTitle}>Projects
-                        <span>
-                            <Link2Icon />
-                        </span>
-                    </h2>
-                </Link> */}
 
-                <Flex align={'center'} mb={'2'} ho>
-                    <Link2Icon />
-                    <Heading as='h2' size={'5'} ml={'2'}>Projects</Heading>
-                </Flex>
+
+                <a href="/projects" className={styles.hoverLink} style={{ width: "fit-content", display: "inline-flex" }}  >
+                    <Flex align={'center'} mb={'2'} >
+
+                        <Link2Icon />
+                        <Heading as='h2' size={'5'} ml={'2'} >Projects</Heading>
+                    </Flex>
+                </a>
                 <div className={styles.projectCardContainer}>
 
                     {cardInfo.map((card, index) => (
@@ -158,33 +155,6 @@ export const HomePage = () => {
                     ))
                     }
 
-                </div>
-                <div className="project">
-                    <h3>Project 1</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                        quidem, voluptates, quas, doloremque quod accusantium ex quae
-                        aspernatur doloribus iure fugit. Quisquam quidem, voluptates, quas,
-                        doloremque quod accusantium ex quae aspernatur doloribus iure fugit.
-                    </p>
-                </div>
-                <div className="project">
-                    <h3>Project 2</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                        quidem, voluptates, quas, doloremque quod accusantium ex quae
-                        aspernatur doloribus iure fugit. Quisquam quidem, voluptates, quas,
-                        doloremque quod accusantium ex quae aspernatur doloribus iure fugit.
-                    </p>
-                </div>
-                <div className="project">
-                    <h3>Project 3</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                        quidem, voluptates, quas, doloremque quod accusantium ex quae
-                        aspernatur doloribus iure fugit. Quisquam quidem, voluptates, quas,
-                        doloremque quod accusantium ex quae aspernatur doloribus iure fugit.
-                    </p>
                 </div>
 
 
@@ -213,16 +183,20 @@ export const HomePage = () => {
                     </div>
                 </div>
             </section> */}
+
+            <Flex direction="column" justify="center" mt={'4'} p={'4'} className={styles.projects}>
+
+                    <Flex align={'center'} mb={'2'}  style={{ width: "fit-content", display: "inline-flex" }}>
+
+                        {/* <Link2Icon /> */}
+                        <CodeIcon />
+                        <Heading as='h2' size={'5'} ml={'2'} >Technologies</Heading>
+                    </Flex>
+            </Flex>
             <Technologies />
-            <section className="about">
-                <h2>About</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                    quidem, voluptates, quas, doloremque quod accusantium ex quae aspernatur
-                    doloribus iure fugit. Quisquam quidem, voluptates, quas, doloremque quod
-                    accusantium ex quae aspernatur doloribus iure fugit.
-                </p>
-            </section>
+
+
+          
 
             <ContactForm />
         </PortfolioLayout>

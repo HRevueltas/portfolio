@@ -105,6 +105,18 @@
 .projects {
     width: 100%;
 }
+
+.hoverLink {
+    /* background-color: aqua; */
+    transition: ease-in-out 0.3s all;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.hoverLink:hover {
+    color: var(--solid-1);
+}
+
 /* 
 .sectionTitle {
     display: flex;
@@ -150,10 +162,11 @@
     gap: 8px;
     /* grid-template-columns:   */
     /* grid-template-columns: repeat(1, 1fr); */
-    
-    
-    
+
+
+
 }
+
 @keyframes scale {
 
     from,
