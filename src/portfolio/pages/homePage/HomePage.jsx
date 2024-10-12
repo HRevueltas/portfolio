@@ -1,5 +1,6 @@
-import { Box, Flex } from '@radix-ui/themes';
+import { Box, Flex, Text, Heading } from '@radix-ui/themes';
 import { GitHubLogoIcon, Link1Icon, Link2Icon, LinkedInLogoIcon } from '@radix-ui/react-icons';
+import { Avatar } from '@radix-ui/themes';
 import { PortfolioLayout } from '../../layout/PortfolioLayout';
 import styles from './homePage.module.css';
 import { Link } from 'react-router-dom';
@@ -30,7 +31,7 @@ export const HomePage = () => {
             // console.log(document.querySelectorAll('[data-name="icon"]'));
             timeouts.push(setTimeout(() => {
                 animate(icon);
-                intervals.push(setInterval(() => animate(icon), 1000));
+                intervals.push(setInterval(() => animate(icon), 1500));
             }, index++ * 300));
         }
     }
@@ -52,6 +53,7 @@ export const HomePage = () => {
         <PortfolioLayout>
             <Flex direction="column" justify="center" p={'4'}>
                 <Box>
+                    <Avatar src={'./public/largeBust.png'} alt={'avatar'} size={{ initial: '9', lg: '9', md: '6' }} mb={'4'} />
                     <h1
                         className={styles.nameTitle}>Harold Revueltas</h1>
                     <p data-name='magic' className={styles.description}>
@@ -137,13 +139,18 @@ export const HomePage = () => {
             </Flex>
 
             <Flex direction="column" justify="center" p={'4'} className={styles.projects}>
-                <Link to={'/projects'}>
+                {/* <Link to={'/projects'}>
                     <h2 className={styles.sectionTitle}>Projects
                         <span>
                             <Link2Icon />
                         </span>
                     </h2>
-                </Link>
+                </Link> */}
+
+                <Flex align={'center'} mb={'2'} ho>
+                    <Link2Icon />
+                    <Heading as='h2' size={'5'} ml={'2'}>Projects</Heading>
+                </Flex>
                 <div className={styles.projectCardContainer}>
 
                     {cardInfo.map((card, index) => (
@@ -217,7 +224,7 @@ export const HomePage = () => {
                 </p>
             </section>
 
-                 <ContactForm /> 
+            <ContactForm />
         </PortfolioLayout>
     );
 };

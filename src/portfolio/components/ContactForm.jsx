@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Flex, Text } from '@radix-ui/themes';
+import { Box, Button, Flex, Text, Separator } from '@radix-ui/themes';
 import { MobileIcon, PaperPlaneIcon } from '@radix-ui/react-icons';
 import styles from './ContactForm.module.css';
 
@@ -17,7 +17,7 @@ export const ContactForm = () => {
           CONTACT
         </Text>
       </Box>
-      <hr className={styles.separator} />
+      <Separator size={'4'} color='violet' />
       <Box className={styles.formContainer}>
         <Box className={styles.sidebar}>
           caja1

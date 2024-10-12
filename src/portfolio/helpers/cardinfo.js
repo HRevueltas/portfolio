@@ -51,6 +51,7 @@ export const cardInfo = [
         title: 'Running Diary',
         description:'',
         url: '/slider.mp4',
-    }
+    },
+    
 
 ]

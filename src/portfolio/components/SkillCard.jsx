@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from '@radix-ui/themes';
 import styles from './SkillCard.module.css';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 
 export const SkillCard = ({
@@ -11,10 +11,14 @@ export const SkillCard = ({
 }) => {
 
 
+
+
     const cardRef = useRef(null);
     // console.log(cardRef.current);
     const handleMouseEnter = (e) => {
         const cardRect = cardRef.current.getBoundingClientRect();
+
+
         // console.log(cardRect );
         const mouseX = e.clientX - cardRect.left;
         const mouseY = e.clientY - cardRect.top;

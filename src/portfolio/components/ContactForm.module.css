@@ -72,13 +72,16 @@
   gap: 1rem;
 }
 
+
 .input,
 .textarea {
   width: 100%;
   padding: 8px;
   background: none;
-  border: none;
-  border-bottom: 1px solid var(--gray-a6);
+  border-radius: 8px;
+  border: 1px solid var(--violet-a6);
+  color: var(--text);
+
 }
 
 .textarea {
@@ -89,7 +92,17 @@
 .input:focus,
 .textarea:focus {
   outline: none;
-  border-bottom: 1px solid var(--solid-1);
+  color: var(--text);
+  border-bottom: 2px solid var(--solid-1);
+}
+
+@keyframes borderButtonWidth {
+
+  0%,
+  100% {
+    width: 0;
+  }
+
 }
 
 /* .button {
@@ -128,7 +141,8 @@
   /* align-items: center; */
   /* gap: 1rem; */
 }
-.sparkleContainer .sparkle{
+
+.sparkleContainer .sparkle {
 
   color: var(--violet-10);
   opacity: 0;
@@ -140,6 +154,7 @@
   height: 12px;
 
 }
+
 .sparkle:nth-child(2) {
   /* left: -150px; */
   transform: translate(-15px, 2px);
@@ -160,6 +175,7 @@
 button:focus .sparkle:nth-child(1) {
   animation: sparkle .6s both 1500ms;
 }
+
 button:focus .sparkle:nth-child(2) {
   animation: sparkle .6s both 1500ms;
 }
@@ -220,6 +236,7 @@ button:focus .sparkle:nth-child(3) {
     opacity: 1;
     scale: .7;
   }
+
   100% {
     opacity: 0;
     scale: 1;

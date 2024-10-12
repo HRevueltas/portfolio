@@ -54,7 +54,8 @@
 .magic>.magicText {
     /* color: var(--primary); */
 
-    background: linear-gradient(100deg, var(--green-10), var(--blue-10), var(--blue-10), var(--blue-a1), var(--blue-10), var(--green-10), var(--green-10));
+    /* background: linear-gradient(100deg, var(--green-10), var(--blue-10), var(--blue-10), var(--blue-a1), var(--blue-10), var(--green-10), var(--green-10)); */
+    background: linear-gradient(45deg, var(--violet-12), var(--blue-a12), var(--cyan-10), var(--blue-a1), var(--ruby-12), var(--violet-12), var(--violet-12));
     /* background: linear-gradient(100deg, var(--green-a2), var(--blue-10), var(--blue-10), var(--blue-a2), var(--blue-2), var(--green-a2), var(--green-a2)); */
     background-clip: text;
     -webkit-background-clip: text;
@@ -104,11 +105,10 @@
 .projects {
     width: 100%;
 }
-
+/* 
 .sectionTitle {
     display: flex;
     flex-direction: row;
-    /* text-decoration: none; */
     margin-top: 3rem;
     margin-bottom: 3rem;
     justify-content: space-between;
@@ -118,25 +118,24 @@
     font-size: 2.1rem;
 
     transition: color 0.3s;
-}
+} */
 
-.sectionTitle>span {
-    /* font-size: 3rem; */
+/* .sectionTitle>span {
     font-weight: 700;
     line-height: 2rem;
     display: inline-block;
     color: var(--text);
     margin-left: 1rem;
-}
+} */
 
-.sectionTitle:hover>span {
+/* .sectionTitle:hover>span {
     color: var(--solid-1);
 }
 
 .sectionTitle:active {
     transform: scale(0.95);
     color: var(--active-3);
-}
+} */
 
 .projectCardContainer {
     /* display: grid; */
