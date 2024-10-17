@@ -190,7 +190,7 @@ export const HomePage = () => {
 
                         {/* <Link2Icon /> */}
                         <CodeIcon />
-                        <Heading as='h2' size={'5'} ml={'2'} >Technologies</Heading>
+                        <Heading as='h2' size={'5'} ml={'2'}  >Technologies</Heading>
                     </Flex>
             </Flex>
             <Technologies />
